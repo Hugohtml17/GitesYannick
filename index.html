@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O'Plaisir</title>
+    <link rel="shortcut icon" href="C:\Users\Utilisateur\Desktop\gite yannick\logo\logo.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="C:\Users\Utilisateur\Desktop\gite yannick\logo\logo.jpg" alt="logo O'plaisir" height="100">
+
+        <h1>O'plaisir</h1>
+        <span class="slogan"><em><u>
+                    <p>"On ne transige pas avec le plaisir"</p>
+                </u></em></span>
+        <h2>NOS SERVICES</h2>
+        <nav class="Marie">
+            <ul class="Menu">
+                <li>
+                    <a href="" title="Gîtes">Gîtes</a>
+
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#description" title="Mouniac">Mouniac</a>
+
+                        </li>
+                        <li>
+                            <a href="#description2" title="Dolmayrac">Dolmayrac</a>
+                        </li>
+                        <li>
+                            <a href="#description3" title="La Montagne">La Montagne</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" title="Traiteur">Traiteur</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#description4" title="Barbecue">Barbecue</a>
+                        </li>
+                        <li>
+                            <a href="#description5" title="Mariage">Mariage</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" title="Vins">Vins</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#description6" title="Bordeaux">Bordeaux</a>
+                        </li>
+                        <li>
+                            <a href="#description7" title="Languedoc">Languedoc</a>
+                        </li>
+                        <li>
+                            <a href="#description8" title="Grands Crus">Grands Crus</a>
+
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="Gites">
+            <h2>Gîtes</h2>
+            <a name="description"></a>
+            <h3 title="Mouniac">Mouniac</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus repellendus quas excepturi, non
+                consequatur facilis modi, voluptatem nemo, eius officiis nobis. Non eveniet atque aperiam neque nihil.
+                Inventore, aliquid? Beatae.</p>
+            <!-- BOITE DE RESERVATION -->
+            <div id="main-content-section" data-magellan-target="main-content-section"></div>
+            <form action="" class="thecontainer booking" name="booking">
+
+                <!-- En-tête Boite de Reservation -->
+                <div class="resaheader">
+                    <!-- Adresse dans l'en-tête -->
+                    <div>
+                        <h4>RESERVATION</h4>
+                        <div class="icon"></div>
+                    </div>
+                </div>
+
+                <!-- Declarations des differentes classes du calendrier -->
+                <div id="resa">
+                    <div class="thecontainer calendar">
+                        <div class="resaheader"></div>
+                        <div id="overlay"></div>
+                        <div class="icon arr prev"></div>
+                        <div class="month">MAI 2023</div>
+                        <div class="icon arr next"></div>
+                        <!-- construction du Calendrier grace au Tableau -->
+                        <table>
+                            <tr>
+                                <th>Dim</th>
+                                <th>Lun</th>
+                                <th>Mar</th>
+                                <th>Mer</th>
+                                <th>Jeu</th>
+                                <th>Ven</th>
+                                <th>Sam</th>
+                            </tr>
+                            <tr>
+                                <td class="notCurMonth">29</td>
+                                <td class="notCurMonth">30</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td class="curDay">3</td>
+                                <td>4</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td class="holiday">7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>14</td>
+                                <td>15</td>
+                                <td>16</td>
+                                <td>17</td>
+                                <td>18</td>
+                                <td>19</td>
+                            </tr>
+                            <tr>
+                                <td>20</td>
+                                <td>21</td>
+                                <td>22</td>
+                                <td class="holiday">23</td>
+                                <td>24</td>
+                                <td>25</td>
+                                <td>26</td>
+                            </tr>
+                            <tr>
+                                <td>27</td>
+                                <td>28</td>
+                                <td>29</td>
+                                <td>30</td>
+                                <td class="notCurMonth">1</td>
+                                <td class="notCurMonth">2</td class="notCurMonth">
+                                <td class="notCurMonth">3</td>
+                            </tr>
+                        </table>
+                        <!-- bouton de recherche de date -->
+                        <button class="button-big" id="add_event">rechercher une date</button>
+                    </div>
+                    <!-- Bouton Arrivée -->
+                    <div class="dates" data-type="none">
+                        <label for="checkin">Arrivée</label>
+                        <div class="input-text">
+                            <input type="datetime" value="01 MAI, 2023" id="checkin" readonly>
+                            <div class="icon pop-up"></div>
+                        </div>
+                        <!-- Bouton Départ -->
+                        <label for="checkout">Départ</label>
+                        <div class="input-text">
+                            <input type="datetime" value="01 MAI, 2023" id="checkout" readonly>
+                            <div class="icon pop-up"></div>
+                        </div>
+                        <!-- bouton date fléxible -->
+                        <div class="div-chck">
+                            <input type="checkbox" id="check">
+                            <div class="icon input-text"></div>
+                            <label for="check" class="checkbox">Date flexible</label>
+                        </div>
+                    </div>
+                    <!-- Bouton choix du nombre d'adultes -->
+                    <ul class="persons">
+                        <li>
+                            <label>Adultes</label>
+                            <div class="input-text">
+                                <select name="adults">
+                                    <option value="1">1</option>
+                                    <option value="2" selected="selected">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <div class="icon"></div>
+                            </div>
+                        </li>
+                        <!-- Bouton choix du nombre d'enfant -->
+                        <li>
+                            <label>Enfant de moins de 16ans</label>
+                            <div class="input-text">
+                                <select name="children">
+                                    <option value="0">0</option>
+                                    <option value="1" selected="selected">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <div class="icon"></div>
+                            </div>
+                        </li>
+                </div>
+                </li>
+                </ul>
+                <!-- bouton de recherche général -->
+                <button class="button-big" id="search">
+                    <div class="icon"></div>Rechercher
+                </button>
+            </form>
+        </div>
+        <a name="description2"></a>
+        <h3 title="Dolmayrac">Dolmayrac</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus repellendus quas excepturi, non consequatur
+            facilis modi, voluptatem nemo, eius officiis nobis. Non eveniet atque aperiam neque nihil. Inventore,
+            aliquid? Beatae.</p>
+        <!-- BOITE DE RESERVATION -->
+        <div id="main-content-section" data-magellan-target="main-content-section"></div>
+        <form action="" class="thecontainer booking" name="booking">
+
+            <!-- En-tête Boite de Reservation -->
+            <div class="resaheader">
+                <!-- Adresse dans l'en-tête -->
+                <div>
+                    <h4>RESERVATION</h4>
+                    <div class="icon"></div>
+                </div>
+            </div>
+
+            <!-- Declarations des differentes classes du calendrier -->
+            <div id="resa">
+                <div class="thecontainer calendar">
+                    <div class="resaheader"></div>
+                    <div id="overlay"></div>
+                    <div class="icon arr prev"></div>
+                    <div class="month">MAI 2023</div>
+                    <div class="icon arr next"></div>
+                    <!-- construction du Calendrier grace au Tableau -->
+                    <table>
+                        <tr>
+                            <th>Dim</th>
+                            <th>Lun</th>
+                            <th>Mar</th>
+                            <th>Mer</th>
+                            <th>Jeu</th>
+                            <th>Ven</th>
+                            <th>Sam</th>
+                        </tr>
+                        <tr>
+                            <td class="notCurMonth">29</td>
+                            <td class="notCurMonth">30</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td class="curDay">3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td class="holiday">7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td class="holiday">23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td class="notCurMonth">1</td>
+                            <td class="notCurMonth">2</td class="notCurMonth">
+                            <td class="notCurMonth">3</td>
+                        </tr>
+                    </table>
+                    <!-- bouton de recherche de date -->
+                    <button class="button-big" id="add_event">rechercher une date</button>
+                </div>
+                <!-- Bouton Arrivée -->
+                <div class="dates" data-type="none">
+                    <label for="checkin">Arrivée</label>
+                    <div class="input-text">
+                        <input type="datetime" value="01 MAI, 2023" id="checkin" readonly>
+                        <div class="icon pop-up"></div>
+                    </div>
+                    <!-- Bouton Départ -->
+                    <label for="checkout">Départ</label>
+                    <div class="input-text">
+                        <input type="datetime" value="01 MAI, 2023" id="checkout" readonly>
+                        <div class="icon pop-up"></div>
+                    </div>
+                    <!-- bouton date fléxible -->
+                    <div class="div-chck">
+                        <input type="checkbox" id="check">
+                        <div class="icon input-text"></div>
+                        <label for="check" class="checkbox">Date flexible</label>
+                    </div>
+                </div>
+                <!-- Bouton choix du nombre d'adultes -->
+                <ul class="persons">
+                    <li>
+                        <label>Adultes</label>
+                        <div class="input-text">
+                            <select name="adults">
+                                <option value="1">1</option>
+                                <option value="2" selected="selected">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                            <div class="icon"></div>
+                        </div>
+                    </li>
+                    <!-- Bouton choix du nombre d'enfant -->
+                    <li>
+                        <label>Enfant de moins de 16ans</label>
+                        <div class="input-text">
+                            <select name="children">
+                                <option value="0">0</option>
+                                <option value="1" selected="selected">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                            <div class="icon"></div>
+                        </div>
+                    </li>
+            </div>
+            </li>
+            </ul>
+            <!-- bouton de recherche général -->
+            <button class="button-big" id="search">
+                <div class="icon"></div>Rechercher
+            </button>
+        </form>
+        </div>
+        <a name="description3"></a>
+        <h3 title="La Montagne">La Montagne</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus repellendus quas excepturi, non consequatur
+            facilis modi, voluptatem nemo, eius officiis nobis. Non eveniet atque aperiam neque nihil. Inventore,
+            aliquid? Beatae.</p>
+        <!-- BOITE DE RESERVATION -->
+        <div id="main-content-section" data-magellan-target="main-content-section"></div>
+        <form action="" class="thecontainer booking" name="booking">
+
+            <!-- En-tête Boite de Reservation -->
+            <div class="resaheader">
+                <!-- Adresse dans l'en-tête -->
+                <div>
+                    <h4>RESERVATION</h4>
+                    <div class="icon"></div>
+                </div>
+            </div>
+
+            <!-- Declarations des differentes classes du calendrier -->
+            <div id="resa">
+                <div class="thecontainer calendar">
+                    <div class="resaheader"></div>
+                    <div id="overlay"></div>
+                    <div class="icon arr prev"></div>
+                    <div class="month">MAI 2023</div>
+                    <div class="icon arr next"></div>
+                    <!-- construction du Calendrier grace au Tableau -->
+                    <table>
+                        <tr>
+                            <th>Dim</th>
+                            <th>Lun</th>
+                            <th>Mar</th>
+                            <th>Mer</th>
+                            <th>Jeu</th>
+                            <th>Ven</th>
+                            <th>Sam</th>
+                        </tr>
+                        <tr>
+                            <td class="notCurMonth">29</td>
+                            <td class="notCurMonth">30</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td class="curDay">3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td class="holiday">7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td class="holiday">23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td class="notCurMonth">1</td>
+                            <td class="notCurMonth">2</td class="notCurMonth">
+                            <td class="notCurMonth">3</td>
+                        </tr>
+                    </table>
+                    <!-- bouton de recherche de date -->
+                    <button class="button-big" id="add_event">rechercher une date</button>
+                </div>
+                <!-- Bouton Arrivée -->
+                <div class="dates" data-type="none">
+                    <label for="checkin">Arrivée</label>
+                    <div class="input-text">
+                        <input type="datetime" value="01 MAI, 2023" id="checkin" readonly>
+                        <div class="icon pop-up"></div>
+                    </div>
+                    <!-- Bouton Départ -->
+                    <label for="checkout">Départ</label>
+                    <div class="input-text">
+                        <input type="datetime" value="01 MAI, 2023" id="checkout" readonly>
+                        <div class="icon pop-up"></div>
+                    </div>
+                    <!-- bouton date fléxible -->
+                    <div class="div-chck">
+                        <input type="checkbox" id="check">
+                        <div class="icon input-text"></div>
+                        <label for="check" class="checkbox">Date flexible</label>
+                    </div>
+                </div>
+                <!-- Bouton choix du nombre d'adultes -->
+                <ul class="persons">
+                    <li>
+                        <label>Adultes</label>
+                        <div class="input-text">
+                            <select name="adults">
+                                <option value="1">1</option>
+                                <option value="2" selected="selected">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                            <div class="icon"></div>
+                        </div>
+                    </li>
+                    <!-- Bouton choix du nombre d'enfant -->
+                    <li>
+                        <label>Enfant de moins de 16ans</label>
+                        <div class="input-text">
+                            <select name="children">
+                                <option value="0">0</option>
+                                <option value="1" selected="selected">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                            <div class="icon"></div>
+                        </div>
+                    </li>
+            </div>
+            </li>
+            </ul>
+            <!-- bouton de recherche général -->
+            <button class="button-big" id="search">
+                <div class="icon"></div>Rechercher
+            </button>
+        </form>
+        </div>
+        </div>
+        </div>
+        <div class="Traiteur">
+            <h2>Traiteur</h2>
+            <a name="description4"></a>
+            <h3 title="Barbecue">Barbecue</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus repellendus quas excepturi, non
+                consequatur facilis modi, voluptatem nemo, eius officiis nobis. Non eveniet atque aperiam neque nihil.
+                Inventore, aliquid? Beatae.</p>
+        </div>
+        <!-- BOITE DE RESERVATION -->
+        <div id="main-content-section" data-magellan-target="main-content-section"></div>
+        <form action="" class="thecontainer booking" name="booking">
+
+            <!-- En-tête Boite de Reservation -->
+            <div class="resaheader">
+                <!-- Adresse dans l'en-tête -->
+                <div>
+                    <h4>RESERVATION</h4>
+                    <div class="icon"></div>
+                </div>
+            </div>
+
+            <!-- Declarations des differentes classes du calendrier -->
+            <div id="resa">
+                <div class="thecontainer calendar">
+                    <div class="resaheader"></div>
+                    <div id="overlay"></div>
+                    <div class="icon arr prev"></div>
+                    <div class="month">MAI 2023</div>
+                    <div class="icon arr next"></div>
+                    <!-- construction du Calendrier grace au Tableau -->
+                    <table>
+                        <tr>
+                            <th>Dim</th>
+                            <th>Lun</th>
+                            <th>Mar</th>
+                            <th>Mer</th>
+                            <th>Jeu</th>
+                            <th>Ven</th>
+                            <th>Sam</th>
+                        </tr>
+                        <tr>
+                            <td class="notCurMonth">29</td>
+                            <td class="notCurMonth">30</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td class="curDay">3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td class="holiday">7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td class="holiday">23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td class="notCurMonth">1</td>
+                            <td class="notCurMonth">2</td class="notCurMonth">
+                            <td class="notCurMonth">3</td>
+                        </tr>
+                    </table>
+                    <!-- bouton de recherche de date -->
+                    <button class="button-big" id="add_event">rechercher une date</button>
+                </div>
+                <!-- Bouton Arrivée -->
+                <div class="dates" data-type="none">
+                    <label for="checkin">Arrivée</label>
+                    <div class="input-text">
+                        <input type="datetime" value="01 MAI, 2023" id="checkin" readonly>
+                        <div class="icon pop-up"></div>
+                    </div>
+                    <!-- Bouton Départ -->
+                    <label for="checkout">Départ</label>
+                    <div class="input-text">
+                        <input type="datetime" value="01 MAI, 2023" id="checkout" readonly>
+                        <div class="icon pop-up"></div>
+                    </div>
+                    <!-- bouton date fléxible -->
+                    <div class="div-chck">
+                        <input type="checkbox" id="check">
+                        <div class="icon input-text"></div>
+                        <label for="check" class="checkbox">Date flexible</label>
+                    </div>
+                </div>
+                <!-- Bouton choix du nombre d'adultes -->
+                <ul class="persons">
+                    <li>
+                        <label>Adultes</label>
+                        <div class="input-text">
+                            <select name="adults">
+                                <option value="1">1</option>
+                                <option value="2" selected="selected">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                            <div class="icon"></div>
+                        </div>
+                    </li>
+                    <!-- Bouton choix du nombre d'enfant -->
+                    <li>
+                        <label>Enfant de moins de 16ans</label>
+                        <div class="input-text">
+                            <select name="children">
+                                <option value="0">0</option>
+                                <option value="1" selected="selected">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                            <div class="icon"></div>
+                        </div>
+                    </li>
+            </div>
+            </li>
+            </ul>
+            <!-- bouton de recherche général -->
+            <button class="button-big" id="search">
+                <div class="icon"></div>Rechercher
+            </button>
+        </form>
+        </div>
+        <a name="description5"></a>
+        <h3 title="Mariage">Mariage</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus repellendus quas excepturi, non consequatur
+            facilis modi, voluptatem nemo, eius officiis nobis. Non eveniet atque aperiam neque nihil. Inventore,
+            aliquid? Beatae.</p>
+        <!-- BOITE DE RESERVATION -->
+        <div id="main-content-section" data-magellan-target="main-content-section"></div>
+        <form action="" class="thecontainer booking" name="booking">
+
+            <!-- En-tête Boite de Reservation -->
+            <div class="resaheader">
+                <!-- Adresse dans l'en-tête -->
+                <div>
+                    <h4>RESERVATION</h4>
+                    <div class="icon"></div>
+                </div>
+            </div>
+
+            <!-- Declarations des differentes classes du calendrier -->
+            <div id="resa">
+                <div class="thecontainer calendar">
+                    <div class="resaheader"></div>
+                    <div id="overlay"></div>
+                    <div class="icon arr prev"></div>
+                    <div class="month">MAI 2023</div>
+                    <div class="icon arr next"></div>
+                    <!-- construction du Calendrier grace au Tableau -->
+                    <table>
+                        <tr>
+                            <th>Dim</th>
+                            <th>Lun</th>
+                            <th>Mar</th>
+                            <th>Mer</th>
+                            <th>Jeu</th>
+                            <th>Ven</th>
+                            <th>Sam</th>
+                        </tr>
+                        <tr>
+                            <td class="notCurMonth">29</td>
+                            <td class="notCurMonth">30</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td class="curDay">3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td class="holiday">7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td class="holiday">23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td class="notCurMonth">1</td>
+                            <td class="notCurMonth">2</td class="notCurMonth">
+                            <td class="notCurMonth">3</td>
+                        </tr>
+                    </table>
+                    <!-- bouton de recherche de date -->
+                    <button class="button-big" id="add_event">rechercher une date</button>
+                </div>
+                <!-- Bouton Arrivée -->
+                <div class="dates" data-type="none">
+                    <label for="checkin">Arrivée</label>
+                    <div class="input-text">
+                        <input type="datetime" value="01 MAI, 2023" id="checkin" readonly>
+                        <div class="icon pop-up"></div>
+                    </div>
+                    <!-- Bouton Départ -->
+                    <label for="checkout">Départ</label>
+                    <div class="input-text">
+                        <input type="datetime" value="01 MAI, 2023" id="checkout" readonly>
+                        <div class="icon pop-up"></div>
+                    </div>
+                    <!-- bouton date fléxible -->
+                    <div class="div-chck">
+                        <input type="checkbox" id="check">
+                        <div class="icon input-text"></div>
+                        <label for="check" class="checkbox">Date flexible</label>
+                    </div>
+                </div>
+                <!-- Bouton choix du nombre d'adultes -->
+                <ul class="persons">
+                    <li>
+                        <label>Adultes</label>
+                        <div class="input-text">
+                            <select name="adults">
+                                <option value="1">1</option>
+                                <option value="2" selected="selected">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                            <div class="icon"></div>
+                        </div>
+                    </li>
+                    <!-- Bouton choix du nombre d'enfant -->
+                    <li>
+                        <label>Enfant de moins de 16ans</label>
+                        <div class="input-text">
+                            <select name="children">
+                                <option value="0">0</option>
+                                <option value="1" selected="selected">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                            <div class="icon"></div>
+                        </div>
+                    </li>
+            </div>
+            </li>
+            </ul>
+            <!-- bouton de recherche général -->
+            <button class="button-big" id="search">
+                <div class="icon"></div>Rechercher
+            </button>
+        </form>
+        </div>
+        <div class="Vins">
+            <h2>Vins</h2>
+            <a name="description6"></a>
+            <h3 title="Bordeaux">Bordeaux</h3>
+            <table style="width: 50%;" border="1">
+                <tbody>
+                    <tr>
+                        <th>CHATEAUX</th>
+                        <th>ANNEES</th>
+                        <th>CEPAGES</th>
+                        <th>Disponibilité</th>
+                        <th>&nbsp;</th>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Grave</td>
+                        <td>2017</td>
+                        <td>Merlot</td>
+                        <td>En stock</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>...</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a name="description7"></a>
+            <h3 title="Languedoc">Languedoc</h3>
+            <a name="description8"></a>
+            <h3 title="Grands Crus">Grands Crus</h3>
+        </div>
+    </main>
+    <footer>
+        <h4>Contact</h4>
+        <div class="Contact">
+            <p>Tel:+33 6.59.46.59.23</p>
+            <p> Email:yannick@gites.fr</p>
+            <p>
+                Instagram:yannick.oplaisir</p>
+        </div>
+    </footer>
+</body>
+
+</html>
