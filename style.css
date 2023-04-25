@@ -1,3 +1,15 @@
+:root {
+  --color1: brown;
+  --color2: #e4b45c;
+  --color3: grey;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: rgb(228, 157, 0);
   background: linear-gradient(
@@ -10,13 +22,76 @@ body {
 img {
   text-align: center;
   border: brown;
+  width: 15%;
+}
+@keyframes tipsy {
+  0 {
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-50%) rotate(90deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) rotate(180deg);
+  }
 }
 h1 {
-  border-top: 1px solid brown;
   color: brown;
+  text-shadow: 0 20px 25px #2e2e31, 0 40px 60px #2e2e31;
+  font-size: 50px;
+  font-weight: bold;
+  text-decoration: underline;
+  letter-spacing: -3px;
+  margin: 0;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+h1:before,
+h1:after {
+  content: "";
+  padding: 0.9em 0.4em;
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  top: 50%;
+  display: block;
+  border: 15px solid brown;
+  transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  animation: 10s infinite alternate ease-in-out tipsy;
+}
+
+h1:before {
+  border-color: rgba(160, 42, 42, 0.479) rgba(160, 42, 42, 0.479)
+    rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  z-index: -1;
+}
+
+h1:after {
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(160, 42, 42, 0.479)
+    rgba(160, 42, 42, 0.479);
+  box-shadow: 25px 25px 25px rgba(46, 46, 49, 0.8);
 }
 .slogan {
+  font-size: 50px;
+  text-shadow: 0 20px 25px #a33802b7, 0 40px 60px #a33802b7;
+  margin: 5px;
   color: brown;
+}
+.dimanche {
+  color: var(--color1);
+}
+
+.holiday {
+  color: var(--color1);
+}
+.notCurMonth {
+  color: var(--color3);
+}
+.curDay {
+  font-size: larger;
 }
 h2 {
   font-size: 50px;
@@ -46,7 +121,7 @@ header li a {
   padding: 20px;
 }
 header li:hover a {
-  background-color: rgb(255, 123, 0);
+  background-color: rgb(245, 146, 53, 0.5);
   color: #e4b45c;
 }
 header li:hover .sub-menu {
@@ -57,7 +132,7 @@ header li:hover .sub-menu {
   display: none;
   text-decoration: none;
   position: absolute;
-  background-color: rgb(255, 123, 0);
+  background-color: rgb(245, 146, 53, 0.5);
   width: 120px;
   text-align: left;
 }
@@ -70,6 +145,11 @@ header li:hover .sub-menu {
 .sub-menu li:hover a {
   background-color: #e4b45c;
   color: brown;
+}
+table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 h3 {
   display: flex;
@@ -86,4 +166,8 @@ h4 {
 }
 .Contact {
   display: inline;
+}
+.image-maison {
+  display: flex;
+  align-items: center;
 }
